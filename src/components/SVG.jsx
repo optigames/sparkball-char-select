@@ -1,9 +1,5 @@
 import PropTypes from "prop-types";
 
-Difficulty.propTypes = {
-  style: PropTypes.string.isRequired,
-};
-
 export const NextArrow = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -58,3 +54,6 @@ export const Difficulty = ({ style }) => (
     </g>
   </svg>
 );
+Difficulty.propTypes = {
+  style: PropTypes.string.isRequired,
+};
