@@ -34,7 +34,7 @@ export default function Slider({ activeChar, setActiveChar }) {
         centeredSlides={true}
         centeredSlidesBounds={true}
         loop={true}
-        loopAdditionalSlides={5}
+        loopAdditionalSlides={2}
         slideToClickedSlide={true}
         onSlideChange={handleSlideChange}
       >

@@ -1,21 +1,27 @@
 [
   {
-    "name": "inktsy",
+    "name": "INKTSY",
     "title": "THE ARTIST WITH A CAUSE",
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
-    "icon": "",
-    "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
-    "role": "Speedster",
-    "difficulty": 4
+    "art": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy.png?raw=true",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
+    "role": "Role: Speedster",
+    "difficulty": 4,
+    "theme": "#ad45c2",
+    "shapemain": "#db77e7",
+    "shapeborder": "#feb4fe"
   },
   {
-    "name": "enna",
+    "name": "Enna",
     "title": "FREERUNNING AGENT",
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
-    "icon": "",
-    "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
-    "role": "Speedster",
-    "difficulty": 2
+    "art": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/enna.png?raw=true",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/enna-bg.png?raw=true",
+    "role": "Role: Speedster",
+    "difficulty": 2,
+    "theme": "#3c248c",
+    "shapemain": "#9d65ce",
+    "shapeborder": "#c18eee"
   },
   {
     "name": "kana",
@@ -23,8 +29,10 @@
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
     "icon": "",
     "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
     "role": "Speedster",
-    "difficulty": 2
+    "difficulty": 2,
+    "theme": "#E986F1"
   },
   {
     "name": "jet",
@@ -32,8 +40,10 @@
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
     "icon": "",
     "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
     "role": "Speedster",
-    "difficulty": 2
+    "difficulty": 2,
+    "theme": "#3c248c"
   },
   {
     "name": "roostandor",
@@ -41,8 +51,10 @@
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
     "icon": "",
     "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
     "role": "Speedster",
-    "difficulty": 2
+    "difficulty": 2,
+    "theme": "#E986F1"
   },
   {
     "name": "janitor",
@@ -50,8 +62,10 @@
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
     "icon": "",
     "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
     "role": "Speedster",
-    "difficulty": 2
+    "difficulty": 2,
+    "theme": "#3c248c"
   },
   {
     "name": "hotpaws",
@@ -59,7 +73,42 @@
     "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
     "icon": "",
     "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
     "role": "Speedster",
-    "difficulty": 2
+    "difficulty": 2,
+    "theme": "#E986F1"
+  },
+  {
+    "name": "roostandor-2",
+    "title": "FREERUNNING AGENT",
+    "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
+    "icon": "",
+    "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
+    "role": "Speedster",
+    "difficulty": 2,
+    "theme": "#E986F1"
+  },
+  {
+    "name": "janitor-2",
+    "title": "FREERUNNING AGENT",
+    "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
+    "icon": "",
+    "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
+    "role": "Speedster",
+    "difficulty": 2,
+    "theme": "#3c248c"
+  },
+  {
+    "name": "hotpaws-2",
+    "title": "FREERUNNING AGENT",
+    "description": "Born in the darkest alleys of the industrial district, she was raised amidst the clamor of forgotten machines and the whispers of a past rebellion. Her real name lost to time, she took on the moniker \"Inktsy,\" a name whispered in fear by the elite and chanted by the oppressed.",
+    "icon": "",
+    "art": "https://cdn.sparkadia.gg/characters/enna/enna-action.png",
+    "transparentimage": "https://github.com/YuriMatvieiev/sparkball-char-select/blob/main/src/assets/img/hero/inktsy-bg.png?raw=true",
+    "role": "Speedster",
+    "difficulty": 2,
+    "theme": "#E986F1"
   }
 ]

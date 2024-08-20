@@ -13,7 +13,7 @@ export default function Info({ activeChar }) {
       return (
         <Difficulty
           key={index}
-          style={{ fill: fillColor, stroke: "#FFBA00" }}
+          DifficultyStyle={{ fill: fillColor, stroke: "#FFBA00" }}
         />
       );
     });
