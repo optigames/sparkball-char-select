@@ -1,0 +1,154 @@
+$fontFamily: "Elza";
+$fontSize: 16px; // де 14(px) - розмір шрифту за замовчуванням з макету
+
+// Основні кольори
+$mainColor: #fff; // Колір шрифту за замовчуванням
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$tablet: 991.98px; // Планшети, деякі телефони в горизонтальному положенні
+$mobile: 767.98px; // Телефони L
+$mobileSmall: 479.98px; // Телефони S
+
+$responsiveType: 1;
+
+@import "null.scss";
+@import "swiper.scss";
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  @supports (overflow: clip) {
+    overflow: clip;
+  }
+  // Притискаємо footer
+  > main {
+    flex: 1 1 auto;
+  }
+  // Фікс для слайдерів
+  > * {
+    min-width: 0;
+  }
+}
+
+.hero {
+  height: 100dvh;
+  background: url("/src/assets/img/bg.png"), #3c248c 0% 0% no-repeat;
+  background-blend-mode: screen;
+  .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+  }
+  .img-hero-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 30px 20px 90px;
+  position: relative;
+  z-index: 3;
+  &__right {
+    display: flex;
+    gap: 80px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+  &__swiper {
+    position: relative;
+  }
+  &__slide {
+  }
+}
+
+//========================================================================================================================================================
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+.info {
+  padding-top: 26px;
+  max-width: 767px;
+  &__title {
+    font-size: 95px;
+    line-height: 119%;
+    font-family: "Ironstrike";
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__subtitle {
+    color: #ffba00;
+    line-height: 150%;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: "Erbaum";
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 0.4px;
+  }
+  &__desc {
+    line-height: 160%;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  &__role {
+    font-family: "noto-sans";
+    font-weight: 700;
+    line-height: 160%;
+    margin-bottom: 16px;
+    span {
+      font-weight: 500;
+    }
+  }
+  &__difficulty {
+    font-family: "noto-sans";
+    font-weight: 700;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &__art {
+    position: absolute;
+    top: 5px;
+    right: -405px;
+    -webkit-filter: drop-shadow(11px 5px 0px #ffba00);
+    filter: drop-shadow(11px 5px 0px #ffba00);
+  }
+}

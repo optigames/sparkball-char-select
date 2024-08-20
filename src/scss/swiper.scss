@@ -1,0 +1,57 @@
+.swiper {
+  overflow: hidden;
+  width: 575px;
+}
+.swiper-initialized {
+  touch-action: pan-y;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  position: relative;
+}
+.swiper-vertical {
+  .swiper-wrapper {
+    flex-direction: column;
+  }
+}
+.swiper-autoheight {
+  .swiper-wrapper {
+    align-items: flex-start;
+  }
+}
+.swiper-initialized {
+  .swiper-slide {
+    flex-shrink: 0;
+    // transition-property: transform;
+  }
+}
+.swiper-android {
+  .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.swiper-button-lock {
+  display: none !important;
+}
+.swiper-slide {
+  width: 99px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  &-next {
+    right: -45px;
+  }
+  &-prev {
+    left: -45px;
+  }
+}
