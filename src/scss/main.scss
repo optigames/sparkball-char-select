@@ -34,6 +34,8 @@ $responsiveType: 1;
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  background-blend-mode: screen;
+
   @supports (overflow: clip) {
     overflow: clip;
   }
@@ -49,12 +51,10 @@ $responsiveType: 1;
 
 .hero {
   min-height: 100dvh;
-  background-blend-mode: screen;
-  position: relative;
   z-index: 1;
   .img-hero-bg {
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     z-index: 2;
   }
@@ -100,7 +100,7 @@ $responsiveType: 1;
 .container {
   max-width: 1640px;
   margin: 0 auto;
-  padding: 0 20px 30px;
+  padding: 0 20px;
   position: relative;
 }
 .info {
@@ -241,9 +241,10 @@ $responsiveType: 1;
 //========================================================================================================================================================
 
 .footer {
-  margin-top: 114px;
+  padding-top: 114px;
+  padding-bottom: 33px;
   position: relative;
-  z-index: 5;
+  z-index: 3;
   &__info {
     display: flex;
     align-items: center;
@@ -255,10 +256,11 @@ $responsiveType: 1;
   }
   &__rotated-text {
     position: absolute;
-    bottom: 150px;
-    right: -270px;
+    bottom: 180px;
+    right: -110px;
     transform: matrix(0, 1, -1, 0, 0, 0);
     text-align: right;
+    z-index: 1;
   }
   &__rotated-title {
     font-size: 38px;
@@ -267,6 +269,10 @@ $responsiveType: 1;
     font-weight: 700;
     margin-bottom: 14px;
     letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+
   }
   &__rotated-subtitle {
     color: #ffba00;

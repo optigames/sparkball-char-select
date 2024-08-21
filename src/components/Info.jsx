@@ -3,7 +3,7 @@ import { useEffect, useMemo } from "react";
 import data from "../assets/data.json";
 import { Difficulty } from "./SVG";
 import Stats from "./Stats/Stats";
-import Footer from "./Footer";
+
 
 export default function Info({
   activeChar,
@@ -59,7 +59,7 @@ export default function Info({
               setOpen={setOpen}
             />
           </div>
-          <Footer />
+         
         </>
       )}
     </div>

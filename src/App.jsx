@@ -5,6 +5,7 @@ import Spotlight from "./components/Stats/Spotlight";
 import bg from "./assets/img/bg.png";
 import data from "./assets/data.json";
 import { BottomShape, TopShape } from "./components/SVG";
+import Footer from "./components/Footer";
 
 function App() {
   const [activeChar, setActiveChar] = useState("");
@@ -38,13 +39,13 @@ function App() {
   }, []);
 
   return (
-    <div className="wrapper">
-      <div
-        style={{
-          background: `url(${bg}) 50% 50% / cover, ${theme} no-repeat`,
-        }}
-        className="hero"
-      >
+    <div
+      style={{
+        background: `url(${bg}) 50% 50% / cover, ${theme} no-repeat`,
+      }}
+      className="wrapper"
+    >
+      <div className="hero">
         <TopShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         <BottomShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         {backgroundImg && (
@@ -61,16 +62,16 @@ function App() {
             setOpen={setOpen}
           />
         )}
-
-        {selectedCategory === "HERO SPOTLIGHT" && (
-          <Spotlight
-            isOpen={isOpen}
-            setOpen={setOpen}
-            setSelectedCategory={setSelectedCategory}
-            youtubeId={youtubeId}
-          />
-        )}
       </div>
+      {selectedCategory === "HERO SPOTLIGHT" && (
+        <Spotlight
+          isOpen={isOpen}
+          setOpen={setOpen}
+          setSelectedCategory={setSelectedCategory}
+          youtubeId={youtubeId}
+        />
+      )}
+      <Footer />
     </div>
   );
 }
