@@ -49,14 +49,12 @@ function App() {
       >
         <TopShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
 
-        {/* Умовне рендерення фонового зображення */}
         {backgroundImg && (
           <img className="img-hero-bg" src={backgroundImg} alt="Background" />
         )}
 
         <Header activeChar={activeChar} setActiveChar={setActiveChar} />
 
-        {/* Рендеримо Info тільки якщо активний персонаж обраний */}
         {activeChar && <Info activeChar={activeChar} />}
       </div>
     </div>

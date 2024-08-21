@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import data from "../assets/data.json";
 import { useEffect } from "react";
 import { Difficulty } from "./SVG";
-import Stats from "./Stats";
+import Stats from "./Stats/Stats";
 
 export default function Info({ activeChar }) {
   const character = data.find(
