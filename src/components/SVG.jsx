@@ -116,6 +116,36 @@ export const BottomShape = ({ ShapeMain, ShapeBorder }) => (
     </g>
   </svg>
 );
+export const BottomShadow = ({ ShapeMain, ShapeBorder }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    width="1025.996"
+    height="395.208"
+    viewBox="0 0 1025.996 395.208"
+    className="hero__bottom-shadow"
+  >
+    <defs>
+      <linearGradient
+        id="linear-gradient"
+        x1="0.5"
+        x2="0.648"
+        y2="1.197"
+        gradientUnits="objectBoundingBox"
+      >
+        <stop offset="0" startOffset={ShapeMain} stopOpacity="0.2" />
+        <stop offset="1" stopColor={ShapeMain} stopOpacity="0" />
+      </linearGradient>
+    </defs>
+    <path
+      id="Subtraction_121"
+      data-name="Subtraction 121"
+      d="M-11865.006-14337.794v0L-12891-14733l913.456,268.058-467.356-199.3,579.9,148.764v177.686Z"
+      transform="translate(12891.002 14733.002)"
+      fill="url(#linear-gradient)"
+    />
+  </svg>
+);
 
 Difficulty.propTypes = {
   DifficultyStyle: PropTypes.object.isRequired,
@@ -127,6 +157,11 @@ TopShape.propTypes = {
 };
 
 BottomShape.propTypes = {
+  ShapeMain: PropTypes.string.isRequired,
+  ShapeBorder: PropTypes.string.isRequired,
+};
+
+BottomShadow.propTypes = {
   ShapeMain: PropTypes.string.isRequired,
   ShapeBorder: PropTypes.string.isRequired,
 };

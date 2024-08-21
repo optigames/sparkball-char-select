@@ -4,7 +4,7 @@ import Info from "./components/Info";
 import Spotlight from "./components/Stats/Spotlight";
 import bg from "./assets/img/bg.png";
 import data from "./assets/data.json";
-import { BottomShape, TopShape } from "./components/SVG";
+import { BottomShadow, BottomShape, TopShape } from "./components/SVG";
 import Footer from "./components/Footer";
 
 function App() {
@@ -48,6 +48,7 @@ function App() {
       <div className="hero">
         <TopShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         <BottomShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
+        <BottomShadow ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         {backgroundImg && (
           <img className="img-hero-bg" src={backgroundImg} alt="Background" />
         )}
