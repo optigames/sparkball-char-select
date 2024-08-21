@@ -91,6 +91,6 @@ Difficulty.propTypes = {
 };
 
 TopShape.propTypes = {
-  ShapeMain: PropTypes.object.isRequired,
-  ShapeBorder: PropTypes.object.isRequired,
+  ShapeMain: PropTypes.string.isRequired,
+  ShapeBorder: PropTypes.string.isRequired,
 };

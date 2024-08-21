@@ -1,11 +1,20 @@
 import PropTypes from "prop-types";
 import data from "../assets/data.json";
+import { useEffect } from "react";
 import { Difficulty } from "./SVG";
+import Stats from "./Stats";
 
 export default function Info({ activeChar }) {
   const character = data.find(
     (char) => char.name.toLowerCase() === activeChar.toLowerCase()
   );
+
+  useEffect(() => {
+    data.forEach((char) => {
+      const img = new Image();
+      img.src = char.art;
+    });
+  }, []);
 
   const renderDifficultyIcons = (level) => {
     return Array.from({ length: 5 }).map((_, index) => {
@@ -22,19 +31,24 @@ export default function Info({ activeChar }) {
   return (
     <div className="container">
       {character && (
-        <div className="info">
-          <h1 className="info__title">{character.name}</h1>
-          <h2 className="info__subtitle">{character.title}</h2>
-          <div className="info__desc">{character.description}</div>
-          <div className="info__role">
-            Role: <span>{character.role}</span>
-          </div>
-          <div className="info__difficulty">
-            Difficulty:{" "}
-            <span>{renderDifficultyIcons(character.difficulty)}</span>
-          </div>
+        <>
           <img src={character.art} className="info__art" alt="Character Art" />
-        </div>
+
+          <div className="info">
+            <h1 className="info__title">{character.name}</h1>
+            <h2 className="info__subtitle">{character.title}</h2>
+            <div className="info__desc">{character.description}</div>
+            <div className="info__role">
+              Role: <span>{character.role}</span>
+            </div>
+            <div className="info__difficulty">
+              Difficulty:{" "}
+              <span>{renderDifficultyIcons(character.difficulty)}</span>
+            </div>
+            {/* Передаємо дані про персонажа до компонента Stats */}
+            <Stats character={character} />
+          </div>
+        </>
       )}
     </div>
   );
