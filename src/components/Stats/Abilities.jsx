@@ -54,7 +54,10 @@ export default function Abilities({ character }) {
   return (
     <>
       <div className="stats__abilities-name">{activeSkill.title}</div>
-      <div className="stats__abilities-desc">{activeSkill.description}</div>
+      <div
+        className="stats__abilities-desc"
+        dangerouslySetInnerHTML={{ __html: activeSkill.description }}
+      />
       <div className="stats__abilities-icons">
         {skills.map((skill, index) => (
           <button

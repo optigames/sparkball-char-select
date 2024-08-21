@@ -170,6 +170,7 @@ $responsiveType: 1;
     border: 1px solid #ffffff;
     font-weight: 500;
     padding: 10px 42px;
+    outline: none;
     transition: border 0.3s;
     @media (any-hover: hover) {
       &:hover {
@@ -203,11 +204,16 @@ $responsiveType: 1;
   &__abilities-desc {
     line-height: 150%;
     flex-grow: 1;
+    span {
+      font-weight: 800;
+    }
   }
   &__abilities-icons {
+    margin-top: 16px;
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: 22px;
+    justify-content: start;
   }
   &__abilities-icon {
     width: 103px;

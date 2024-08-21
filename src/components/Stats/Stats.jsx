@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import Abilities from "./Abilities";
 import Lore from "./Lore";
+import Tips from "./Tips";
 
 export default function Stats({ character }) {
   const [selectedCategory, setSelectedCategory] = useState("ABILITIES"); // State for selected category
@@ -52,6 +53,7 @@ export default function Stats({ character }) {
           <Abilities character={character} />
         )}
         {selectedCategory === "LORE" && <Lore character={character} />}
+        {selectedCategory === "TIPS" && <Tips character={character} />}
       </div>
     </>
   );

@@ -45,7 +45,6 @@ export default function Info({ activeChar }) {
               Difficulty:{" "}
               <span>{renderDifficultyIcons(character.difficulty)}</span>
             </div>
-            {/* Передаємо дані про персонажа до компонента Stats */}
             <Stats character={character} />
           </div>
         </>
