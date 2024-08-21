@@ -47,7 +47,7 @@ $responsiveType: 1;
 }
 
 .hero {
-  height: 100dvh;
+  min-height: 100dvh;
   background-blend-mode: screen;
   .img-hero-bg {
     position: absolute;
@@ -90,7 +90,7 @@ $responsiveType: 1;
 .container {
   max-width: 1640px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 40px;
   position: relative;
   z-index: 4;
 }
@@ -189,6 +189,9 @@ $responsiveType: 1;
     height: 304px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    scrollbar-color: #fff rgba(255, 255, 255, 0.27);
+    scrollbar-width: thin;
   }
   &__abilities-name {
     font-family: "Erbaum";
