@@ -86,11 +86,47 @@ export const TopShape = ({ ShapeMain, ShapeBorder }) => (
   </svg>
 );
 
+export const BottomShape = ({ ShapeMain, ShapeBorder }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="917.894"
+    height="320.98"
+    viewBox="0 0 917.894 320.98"
+    className="hero__bottom-shape"
+  >
+    <g
+      id="Group_8738"
+      data-name="Group 8738"
+      transform="translate(-1014.982 4.913)"
+    >
+      <path
+        id="Path_10410"
+        data-name="Path 10410"
+        d="M-1700,13987c5.959,3.782,625.894,228.042,625.894,228.042l-10.054-38.326,285.8,122.979V13987Z"
+        transform="translate(2723 -13987)"
+        fill={ShapeMain}
+      />
+      <path
+        id="Path_10428"
+        data-name="Path 10428"
+        d="M12406.908,13579.71l647.122,243.79-6.875-34.511,277.646,108.983-314.883-146.219,11.287,43.2-600.313-217.965Z"
+        transform="translate(-11391.926 -13581.905)"
+        fill={ShapeBorder}
+      />
+    </g>
+  </svg>
+);
+
 Difficulty.propTypes = {
   DifficultyStyle: PropTypes.object.isRequired,
 };
 
 TopShape.propTypes = {
+  ShapeMain: PropTypes.string.isRequired,
+  ShapeBorder: PropTypes.string.isRequired,
+};
+
+BottomShape.propTypes = {
   ShapeMain: PropTypes.string.isRequired,
   ShapeBorder: PropTypes.string.isRequired,
 };

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Lore({ character }) {
   return (
     <>
@@ -9,3 +11,10 @@ export default function Lore({ character }) {
     </>
   );
 }
+
+Lore.propTypes = {
+  character: PropTypes.shape({
+    loretitle: PropTypes.string.isRequired,
+    lore: PropTypes.string.isRequired,
+  }).isRequired,
+};

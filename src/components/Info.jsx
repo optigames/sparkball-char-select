@@ -1,12 +1,20 @@
 import PropTypes from "prop-types";
+import { useEffect, useMemo } from "react";
 import data from "../assets/data.json";
-import { useEffect } from "react";
 import { Difficulty } from "./SVG";
 import Stats from "./Stats/Stats";
+import Footer from "./Footer";
 
-export default function Info({ activeChar }) {
-  const character = data.find(
-    (char) => char.name.toLowerCase() === activeChar.toLowerCase()
+export default function Info({
+  activeChar,
+  selectedCategory,
+  setSelectedCategory,
+  setOpen,
+}) {
+  const character = useMemo(
+    () =>
+      data.find((char) => char.name.toLowerCase() === activeChar.toLowerCase()),
+    [activeChar]
   );
 
   useEffect(() => {
@@ -16,17 +24,16 @@ export default function Info({ activeChar }) {
     });
   }, []);
 
-  const renderDifficultyIcons = (level) => {
-    return Array.from({ length: 5 }).map((_, index) => {
-      const fillColor = index < level ? "#FFBA00" : "transparent";
-      return (
-        <Difficulty
-          key={index}
-          DifficultyStyle={{ fill: fillColor, stroke: "#FFBA00" }}
-        />
-      );
-    });
-  };
+  const renderDifficultyIcons = (level) =>
+    Array.from({ length: 5 }).map((_, index) => (
+      <Difficulty
+        key={index}
+        DifficultyStyle={{
+          fill: index < level ? "#FFBA00" : "transparent",
+          stroke: "#FFBA00",
+        }}
+      />
+    ));
 
   return (
     <div className="container">
@@ -45,8 +52,14 @@ export default function Info({ activeChar }) {
               Difficulty:{" "}
               <span>{renderDifficultyIcons(character.difficulty)}</span>
             </div>
-            <Stats character={character} />
+            <Stats
+              character={character}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              setOpen={setOpen}
+            />
           </div>
+          <Footer />
         </>
       )}
     </div>
@@ -55,4 +68,7 @@ export default function Info({ activeChar }) {
 
 Info.propTypes = {
   activeChar: PropTypes.string.isRequired,
+  selectedCategory: PropTypes.string.isRequired,
+  setSelectedCategory: PropTypes.func.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };

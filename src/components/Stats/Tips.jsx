@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Tips({ character }) {
   return (
     <>
@@ -8,3 +10,9 @@ export default function Tips({ character }) {
     </>
   );
 }
+
+Tips.propTypes = {
+  character: PropTypes.shape({
+    tips: PropTypes.string.isRequired,
+  }).isRequired,
+};

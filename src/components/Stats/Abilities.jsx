@@ -1,55 +1,52 @@
-import { useEffect, useState } from "react";
+import { useState, useMemo, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function Abilities({ character }) {
   const [activeSkill, setActiveSkill] = useState({
-    title: "",
-    description: "",
+    title: character.lmbTitle,
+    description: character.lmbDescription,
   });
 
   useEffect(() => {
-    if (character) {
-      const firstSkill = {
-        title: character.lmbTitle,
-        description: character.lmbDescription,
-      };
-      setActiveSkill(firstSkill);
-    }
-  }, [character]);
-
-  const handleSkillClick = (skill) => {
+    // Оновлюємо activeSkill при зміні character
     setActiveSkill({
-      title: skill.title,
-      description: skill.description,
-    });
-  };
-
-  const skills = [
-    {
       title: character.lmbTitle,
       description: character.lmbDescription,
-      icon: character.lmbIcon,
-    },
-    {
-      title: character.rmbTitle,
-      description: character.rmbDescription,
-      icon: character.rmbIcon,
-    },
-    {
-      title: character.qTitle,
-      description: character.qDescription,
-      icon: character.qIcon,
-    },
-    {
-      title: character.spcTitle,
-      description: character.spcDescription,
-      icon: character.spcIcon,
-    },
-    {
-      title: character.rTitle,
-      description: character.rDescription,
-      icon: character.rIcon,
-    },
-  ];
+    });
+  }, [character]);
+
+  const skills = useMemo(
+    () => [
+      {
+        title: character.lmbTitle,
+        description: character.lmbDescription,
+        icon: character.lmbIcon,
+      },
+      {
+        title: character.rmbTitle,
+        description: character.rmbDescription,
+        icon: character.rmbIcon,
+      },
+      {
+        title: character.qTitle,
+        description: character.qDescription,
+        icon: character.qIcon,
+      },
+      {
+        title: character.spcTitle,
+        description: character.spcDescription,
+        icon: character.spcIcon,
+      },
+      {
+        title: character.rTitle,
+        description: character.rDescription,
+        icon: character.rIcon,
+      },
+    ],
+    [character]
+  );
+
+  const handleSkillClick = (skill) => setActiveSkill(skill);
 
   return (
     <>
@@ -76,3 +73,23 @@ export default function Abilities({ character }) {
     </>
   );
 }
+
+Abilities.propTypes = {
+  character: PropTypes.shape({
+    lmbTitle: PropTypes.string.isRequired,
+    lmbDescription: PropTypes.string.isRequired,
+    lmbIcon: PropTypes.string.isRequired,
+    rmbTitle: PropTypes.string.isRequired,
+    rmbDescription: PropTypes.string.isRequired,
+    rmbIcon: PropTypes.string.isRequired,
+    qTitle: PropTypes.string.isRequired,
+    qDescription: PropTypes.string.isRequired,
+    qIcon: PropTypes.string.isRequired,
+    spcTitle: PropTypes.string.isRequired,
+    spcDescription: PropTypes.string.isRequired,
+    spcIcon: PropTypes.string.isRequired,
+    rTitle: PropTypes.string.isRequired,
+    rDescription: PropTypes.string.isRequired,
+    rIcon: PropTypes.string.isRequired,
+  }).isRequired,
+};

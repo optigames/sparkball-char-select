@@ -1,37 +1,35 @@
 import { useState, useMemo, useEffect } from "react";
 import Header from "./components/Header";
 import Info from "./components/Info";
+import Spotlight from "./components/Stats/Spotlight";
 import bg from "./assets/img/bg.png";
 import data from "./assets/data.json";
-import { TopShape } from "./components/SVG";
+import { BottomShape, TopShape } from "./components/SVG";
 
 function App() {
   const [activeChar, setActiveChar] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("ABILITIES");
+  const [isOpen, setOpen] = useState(false);
 
-  const character = useMemo(() => {
-    return data.find(
-      (char) => char.name.toLowerCase() === activeChar.toLowerCase()
-    );
-  }, [activeChar]);
+  const character = useMemo(
+    () =>
+      data.find((char) => char.name.toLowerCase() === activeChar.toLowerCase()),
+    [activeChar]
+  );
 
   const theme = character?.theme || "#3c248c";
   const backgroundImg = character?.transparentimage || "";
   const shapeMain = character?.shapemain || "#9d65ce";
   const shapeBorder = character?.shapeborder || "#c18eee";
+  const youtubeId = character?.spotlightlink || "Fvk0a0wvUzk";
 
   useEffect(() => {
-    const imagesToPreload = [];
-    data.forEach((char) => {
-      if (!imagesToPreload.includes(char.art)) {
-        imagesToPreload.push(char.art);
-      }
-      if (
-        char.transparentimage &&
-        !imagesToPreload.includes(char.transparentimage)
-      ) {
-        imagesToPreload.push(char.transparentimage);
-      }
-    });
+    const imagesToPreload = data.reduce((acc, char) => {
+      if (char.art && !acc.includes(char.art)) acc.push(char.art);
+      if (char.transparentimage && !acc.includes(char.transparentimage))
+        acc.push(char.transparentimage);
+      return acc;
+    }, []);
 
     imagesToPreload.forEach((src) => {
       const img = new Image();
@@ -43,19 +41,35 @@ function App() {
     <div className="wrapper">
       <div
         style={{
-          background: `url(${bg}), ${theme} no-repeat`,
+          background: `url(${bg}) 50% 50% / cover, ${theme} no-repeat`,
         }}
         className="hero"
       >
         <TopShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
-
+        <BottomShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         {backgroundImg && (
           <img className="img-hero-bg" src={backgroundImg} alt="Background" />
         )}
 
         <Header activeChar={activeChar} setActiveChar={setActiveChar} />
 
-        {activeChar && <Info activeChar={activeChar} />}
+        {activeChar && (
+          <Info
+            activeChar={activeChar}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            setOpen={setOpen}
+          />
+        )}
+
+        {selectedCategory === "HERO SPOTLIGHT" && (
+          <Spotlight
+            isOpen={isOpen}
+            setOpen={setOpen}
+            setSelectedCategory={setSelectedCategory}
+            youtubeId={youtubeId}
+          />
+        )}
       </div>
     </div>
   );
