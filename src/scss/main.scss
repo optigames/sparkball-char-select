@@ -81,7 +81,7 @@ $responsiveType: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 70px 6px;
+  padding: 20px 70px 0px;
   position: relative;
   z-index: 6;
   max-width: 1920px;
@@ -161,7 +161,7 @@ $responsiveType: 1;
   }
   &__art {
     position: absolute;
-    top: -5px;
+    top: -50px;
     // right: -400px;
     right: -24%;
     z-index: 3;
@@ -177,7 +177,7 @@ $responsiveType: 1;
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 8px;
-    margin-top: 36px;
+    margin-top: 24px;
     margin-bottom: 14px;
     max-width: 660px;
   }
@@ -204,16 +204,17 @@ $responsiveType: 1;
     border: 1px solid #ffffff;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    padding: 30px 30px 30px 28px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
+    padding: 24px 28px;
+    height: 320px;
 
     max-width: 720px;
   }
   &__wrap {
     overflow-y: auto;
     padding-right: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     &::-webkit-scrollbar {
       width: 6px;
     }
