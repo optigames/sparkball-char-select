@@ -215,10 +215,20 @@ $responsiveType: 1;
   }
   &__wrap {
     overflow-y: auto;
-    scrollbar-color: #fff rgba(255, 255, 255, 0.27);
-    scrollbar-width: thin;
     padding-right: 40px;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.27);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+    }
   }
+
   &__abilities-name {
     font-family: "Erbaum";
     font-weight: 500;
