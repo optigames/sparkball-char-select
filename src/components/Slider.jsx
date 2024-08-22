@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Navigation } from "swiper/modules";
 import data from "../assets/data.json";
 import { NextArrow, PrevArrow } from "./SVG";
+import { useEffect } from "react";
 
 export default function Slider({ activeChar, setActiveChar }) {
   const handleSlideChange = (swiper) => {
@@ -10,6 +11,17 @@ export default function Slider({ activeChar, setActiveChar }) {
     const activeSlide = data[activeIndex];
     setActiveChar(activeSlide.name);
   };
+
+  useEffect(() => {
+    const swiper = document.querySelector(".swiper").swiper;
+
+    swiper.slides.forEach((slide) => {
+      slide.onclick = () => {
+        const index = slide.dataset.swiperSlideIndex;
+        swiper.slideToLoop(index);
+      };
+    });
+  }, []);
 
   console.log(activeChar);
 
@@ -30,21 +42,16 @@ export default function Slider({ activeChar, setActiveChar }) {
         modules={[Navigation]}
         className="swiper"
         slidesPerView={5}
-        spaceBetween={20}
+        spaceBetween={26}
         centeredSlides={true}
-        centeredSlidesBounds={true}
         loop={true}
-        loopAdditionalSlides={2}
-        slideToClickedSlide={true}
         onSlideChange={handleSlideChange}
       >
         {data.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={slide.icon}
-              alt={slide.name}
-              className={slide.name === activeChar ? "active" : ""}
-            />
+          <SwiperSlide key={index} data-swiper-slide-index={index}>
+            <div className="swiper-clip">
+              <img src={slide.icon} alt={slide.name} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
