@@ -66,10 +66,9 @@ $responsiveType: 1;
   }
   &__bottom-shape {
     position: absolute;
-    bottom: -10px;
-    left: -50px;
+    bottom: 0px;
+    left: 0px;
     z-index: 4;
-    transform: rotate(180deg);
   }
   &__bottom-shadow {
     position: absolute;

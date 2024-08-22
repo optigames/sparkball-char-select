@@ -89,30 +89,43 @@ export const TopShape = ({ ShapeMain, ShapeBorder }) => (
 export const BottomShape = ({ ShapeMain, ShapeBorder }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="917.894"
-    height="320.98"
-    viewBox="0 0 917.894 320.98"
+    width="1688.093"
+    height="159.12"
+    viewBox="0 0 1688.093 159.12"
     className="hero__bottom-shape"
   >
     <g
-      id="Group_8738"
-      data-name="Group 8738"
-      transform="translate(-1014.982 4.913)"
+      id="Group_8735"
+      data-name="Group 8735"
+      transform="translate(-12891 -15876.88)"
     >
       <path
-        id="Path_10410"
-        data-name="Path 10410"
-        d="M-1700,13987c5.959,3.782,625.894,228.042,625.894,228.042l-10.054-38.326,285.8,122.979V13987Z"
-        transform="translate(2723 -13987)"
+        id="Path_10437"
+        data-name="Path 10437"
+        d="M-2723,14926.653l786.312,74.817-82.239,28.067,984.019,31.717H-2723Z"
+        transform="translate(15614 974.745)"
         fill={ShapeMain}
       />
       <path
-        id="Path_10428"
-        data-name="Path 10428"
-        d="M12406.908,13579.71l647.122,243.79-6.875-34.511,277.646,108.983-314.883-146.219,11.287,43.2-600.313-217.965Z"
-        transform="translate(-11391.926 -13581.905)"
+        id="Path_10427"
+        data-name="Path 10427"
+        d="M11385,15678.462l782.277,74.826-74.688,27.517,966.826,32.155-1020.582-21.64,64.861-27.518L11385,15707.394Z"
+        transform="translate(1506 223)"
         fill={ShapeBorder}
       />
+      <g
+        id="Group_8734"
+        data-name="Group 8734"
+        transform="translate(12891.502 14957)"
+      >
+        <path
+          id="Subtraction_124"
+          data-name="Subtraction 124"
+          d="M-12309.011-14549.605l-254.491-17.952v-20.562l254.491,38.513Z"
+          transform="translate(12563 15508)"
+          fill={ShapeBorder}
+        />
+      </g>
     </g>
   </svg>
 );
@@ -164,3 +177,44 @@ BottomShape.propTypes = {
 BottomShadow.propTypes = {
   ShapeMain: PropTypes.string.isRequired,
 };
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1688.093"
+  height="159.12"
+  viewBox="0 0 1688.093 159.12"
+>
+  <g
+    id="Group_8735"
+    data-name="Group 8735"
+    transform="translate(-12891 -15876.88)"
+  >
+    <path
+      id="Path_10437"
+      data-name="Path 10437"
+      d="M-2723,14926.653l786.312,74.817-82.239,28.067,984.019,31.717H-2723Z"
+      transform="translate(15614 974.745)"
+      fill="#db77e7"
+    />
+    <path
+      id="Path_10427"
+      data-name="Path 10427"
+      d="M11385,15678.462l782.277,74.826-74.688,27.517,966.826,32.155-1020.582-21.64,64.861-27.518L11385,15707.394Z"
+      transform="translate(1506 223)"
+      fill="#feb4ff"
+    />
+    <g
+      id="Group_8734"
+      data-name="Group 8734"
+      transform="translate(12891.502 14957)"
+    >
+      <path
+        id="Subtraction_124"
+        data-name="Subtraction 124"
+        d="M-12309.011-14549.605l-254.491-17.952v-20.562l254.491,38.513Z"
+        transform="translate(12563 15508)"
+        fill="#feb4ff"
+      />
+    </g>
+  </g>
+</svg>;
