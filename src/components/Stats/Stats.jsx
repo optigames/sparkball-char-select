@@ -36,11 +36,13 @@ export default function Stats({
       </div>
       {selectedCategory !== "HERO SPOTLIGHT" && (
         <div className="stats__info">
-          {selectedCategory === "ABILITIES" && (
-            <Abilities character={character} />
-          )}
-          {selectedCategory === "LORE" && <Lore character={character} />}
-          {selectedCategory === "TIPS" && <Tips character={character} />}
+          <div className="stats__wrap">
+            {selectedCategory === "ABILITIES" && (
+              <Abilities character={character} />
+            )}
+            {selectedCategory === "LORE" && <Lore character={character} />}
+            {selectedCategory === "TIPS" && <Tips character={character} />}
+          </div>
         </div>
       )}
     </>

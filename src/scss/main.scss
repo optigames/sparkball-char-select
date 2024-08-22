@@ -29,13 +29,13 @@ $responsiveType: 1;
 @import "node_modules/react-modal-video/scss/modal-video.scss";
 
 .wrapper {
-  min-height: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
   background-blend-mode: screen;
-
+  justify-content: space-between;
   @supports (overflow: clip) {
     overflow: clip;
   }
@@ -50,7 +50,7 @@ $responsiveType: 1;
 }
 
 .hero {
-  min-height: 100dvh;
+  // min-height: 100dvh;
   z-index: 1;
   .img-hero-bg {
     position: absolute;
@@ -61,7 +61,7 @@ $responsiveType: 1;
   &__top-shape {
     position: absolute;
     top: -10px;
-    right: -50px;
+    right: -10px;
     z-index: 4;
   }
   &__bottom-shape {
@@ -82,9 +82,11 @@ $responsiveType: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 70px 30px 20px 90px;
+  padding: 70px 70px 20px;
   position: relative;
   z-index: 6;
+  max-width: 1920px;
+  margin: 0 auto;
   &__right {
     display: flex;
     gap: 80px;
@@ -103,22 +105,24 @@ $responsiveType: 1;
 
 //========================================================================================================================================================
 .container {
-  max-width: 1640px;
+  max-width: 1690px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
 }
 .info {
-  padding-top: 26px;
+  padding-top: 34px;
   max-width: 767px;
   position: relative;
   z-index: 6;
   &__title {
     font-size: 95px;
-    line-height: 119%;
+    line-height: 100%;
     font-family: "Ironstrike";
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
   }
   &__subtitle {
     color: #ffba00;
@@ -159,8 +163,9 @@ $responsiveType: 1;
   }
   &__art {
     position: absolute;
-    top: 5px;
-    right: -405px;
+    top: -5px;
+    // right: -400px;
+    right: -24%;
     z-index: 3;
     // -webkit-filter: drop-shadow(11px 5px 0px #ffba00);
     // filter: drop-shadow(11px 5px 0px #ffba00);
@@ -173,9 +178,10 @@ $responsiveType: 1;
   &__buttons {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 10px;
+    gap: 8px;
     margin-top: 36px;
     margin-bottom: 14px;
+    max-width: 660px;
   }
   &__button {
     font-family: "Erbaum";
@@ -183,7 +189,7 @@ $responsiveType: 1;
     line-height: 120%;
     border: 1px solid #ffffff;
     font-weight: 500;
-    padding: 10px 42px;
+    padding: 10px 20px;
     outline: none;
     transition: border 0.3s;
     @media (any-hover: hover) {
@@ -200,13 +206,18 @@ $responsiveType: 1;
     border: 1px solid #ffffff;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    padding: 34px 60px 30px 24px;
-    height: 304px;
+    padding: 30px 30px 30px 28px;
+    height: 300px;
     display: flex;
     flex-direction: column;
+
+    max-width: 720px;
+  }
+  &__wrap {
     overflow-y: auto;
     scrollbar-color: #fff rgba(255, 255, 255, 0.27);
     scrollbar-width: thin;
+    padding-right: 40px;
   }
   &__abilities-name {
     font-family: "Erbaum";
@@ -262,7 +273,7 @@ $responsiveType: 1;
   &__rotated-text {
     position: absolute;
     bottom: 180px;
-    right: -110px;
+    right: -70px;
     transform: matrix(0, 1, -1, 0, 0, 0);
     text-align: right;
     z-index: 1;
