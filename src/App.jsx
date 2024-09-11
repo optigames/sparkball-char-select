@@ -19,7 +19,6 @@ function App() {
   );
 
   const theme = character?.theme || "#3c248c";
-  const backgroundImg = character?.transparentimage || "";
   const shapeMain = character?.shapemain || "#9d65ce";
   const shapeBorder = character?.shapeborder || "#c18eee";
   const youtubeId = character?.spotlightlink || "Fvk0a0wvUzk";
@@ -27,8 +26,6 @@ function App() {
   useEffect(() => {
     const imagesToPreload = data.reduce((acc, char) => {
       if (char.art && !acc.includes(char.art)) acc.push(char.art);
-      if (char.transparentimage && !acc.includes(char.transparentimage))
-        acc.push(char.transparentimage);
       return acc;
     }, []);
 
@@ -49,9 +46,6 @@ function App() {
         <TopShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         <BottomShape ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
         <BottomShadow ShapeMain={shapeMain} ShapeBorder={shapeBorder} />
-        {backgroundImg && (
-          <img className="img-hero-bg" src={backgroundImg} alt="Background" />
-        )}
 
         <Header activeChar={activeChar} setActiveChar={setActiveChar} />
 

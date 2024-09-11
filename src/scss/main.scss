@@ -52,12 +52,7 @@ $responsiveType: 1;
 .hero {
   // min-height: 100dvh;
   z-index: 1;
-  .img-hero-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-  }
+
   &__top-shape {
     position: absolute;
     top: -10px;
