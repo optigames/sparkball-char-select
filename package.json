@@ -15,7 +15,8 @@
     "react-dom": "^18.3.1",
     "react-modal-video": "^2.0.2",
     "swiper": "^11.1.9",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "@vitejs/plugin-react": "^4.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
