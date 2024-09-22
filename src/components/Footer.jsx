@@ -8,7 +8,7 @@ export default function footer() {
           <a href="#">
             <img src={optiLogo} alt="" />
           </a>
-          © 2024 Sparkball, All Rights Reserved
+          © 2024 Opti Games, All Rights Reserved
         </div>
       </div>
       <div className="footer__rotated-text">
